@@ -225,8 +225,9 @@ hr {
 }
 .card__footer {
   background-color: $bg-color-footer;
-  padding: $spacer-xl $spacer-xl $spacer-xl 22px;
-  border-left: 2px solid $border-color-footer;
+  padding: $spacer-xl $spacer-xl $spacer-xl
+    calc($spacer-xl - $border-footer-width);
+  border-left: $border-footer-width solid $border-color-footer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -301,6 +302,20 @@ hr {
 }
 
 @media (width < 744px) {
+  .card {
+    padding-bottom: $spacer-md;
+    hr:not(.stats__stat > hr) {
+      width: calc(100% - $spacer-lg * 2);
+    }
+  }
+  .card__header {
+    padding: $spacer-lg;
+  }
+  .card__content {
+    &__collapsible {
+      padding: $spacer-lg;
+    }
+  }
   .profile__data {
     width: auto;
   }
@@ -334,6 +349,8 @@ hr {
     display: none;
   }
   .card__footer {
+    padding: $spacer-lg $spacer-lg $spacer-lg
+      calc($spacer-lg - $border-footer-width);
     flex-direction: column;
     .btn,
     .forecast {
