@@ -49,21 +49,28 @@ p {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 100vh;
+  flex-direction: column;
 }
 
 hr {
   margin: 2px 0;
   border: none;
   height: 1px;
-  color: $color-gray-light;
+  color: $typography-grey-color-10;
   background-color: $color-gray-light;
 }
 
 .card {
-  width: 754px;
+  max-width: 754px;
   min-height: 354px;
+  min-width: 351px;
+  width: 95vw;
   background-color: white;
   padding-bottom: $spacer-lg;
   border-radius: 16px;
@@ -80,6 +87,7 @@ hr {
   flex-direction: row;
   align-items: center;
   max-height: 42px;
+  justify-content: space-between;
 
   &__data {
     width: 50%;
@@ -102,7 +110,6 @@ hr {
   &__info {
     p {
       font-size: 1.4rem;
-      text-align: left;
       line-height: normal;
       &:first-child {
         color: #000000cc;
@@ -117,6 +124,16 @@ hr {
     }
   }
 }
+.stats-mobile {
+  display: none;
+  .divider {
+    color: $typography-grey-color-10;
+    margin: 0 4px;
+  }
+}
+.stats__stat-mobile {
+  display: none;
+}
 .stats {
   display: flex;
   flex-direction: row;
@@ -128,7 +145,6 @@ hr {
 
   &__stat {
     width: 17%;
-    text-align: left;
 
     &-win {
       color: $color-green;
@@ -152,12 +168,7 @@ hr {
     }
   }
 }
-.divider {
-  height: 1px;
-  width: 100%;
-  background-color: $color-gray-light;
-  margin: 2px 0;
-}
+
 .clamped {
   line-clamp: 5;
   -webkit-line-clamp: 5;
@@ -165,7 +176,6 @@ hr {
   -webkit-box-orient: vertical;
 }
 .card__content {
-  text-align: left;
   color: $typography-main-color;
   position: relative;
   &__collapsible {
@@ -177,7 +187,7 @@ hr {
       transition: max-height 0.3s ease-in-out;
       max-height: var(--truncate-height, auto);
       overflow: hidden;
-      p {
+      p.clamped {
         mask-image: linear-gradient(to bottom, white 50%, transparent);
       }
       & + .expand-btn {
@@ -236,11 +246,11 @@ hr {
   width: 100%;
   &__text {
     font-weight: 600;
-    text-align: left;
     p:first-child {
-      text-transform: capitalize;
-      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
       color: $color-gray;
+      margin-bottom: 5px;
     }
     p {
       font-size: 1.8rem;
@@ -252,13 +262,15 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: left;
     max-width: 35%;
     &__text {
       margin-left: $spacer-md;
       p:first-child {
         font-size: 1.2rem;
         color: $typography-grey-color;
+      }
+      p:nth-child(2) {
+        display: none;
       }
       p {
         font-family: "FuturaPT", sans-serif;
@@ -285,5 +297,75 @@ hr {
     color: white;
     border-radius: 4px;
     background-color: $color-blue;
+  }
+}
+
+@media (width < 744px) {
+  .profile__data {
+    width: auto;
+  }
+  .stats {
+    width: auto;
+    .stats__stat {
+      display: none;
+    }
+  }
+  .stats-mobile {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    .stats__stat {
+      width: auto;
+    }
+  }
+  .stats__stat-mobile {
+    display: block;
+    .stats-mobile__period-text {
+      color: $color-gray;
+      font-weight: 400;
+    }
+    .stats__stat-income {
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  .profile__stats-period-text {
+    display: none;
+  }
+  .card__footer {
+    flex-direction: column;
+    .btn,
+    .forecast {
+      width: 100%;
+    }
+    .forecast {
+      align-items: end;
+      margin-bottom: $spacer-lg;
+      &__text {
+        p:last-child {
+          font-size: 1.6rem;
+        }
+      }
+      &__coef {
+        align-items: end;
+        margin-bottom: 3px;
+        &__text {
+          line-height: 1.1;
+          p:first-child {
+            display: none;
+          }
+
+          p:nth-child(2) {
+            display: inline-block;
+            font-size: 1.2rem;
+            color: $typography-grey-color;
+          }
+          p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
   }
 }

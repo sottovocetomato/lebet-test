@@ -3,14 +3,19 @@ $spacer-md: 12px;
 $spacer-lg: 16px;
 $spacer-xl: 24px;
 
+$color-gray-light: #00000019;
+$color-gray-light-2: #00000033;
+
 $typography-main-color: #00000099;
 $typography-black-color: #000000cc;
 $typography-grey-color: #333333ff;
+$typography-grey-color-10: $color-gray-light;
+$typography-grey-color-20: $color-gray-light-2;
 
 $color-green: #62b435ff;
 $color-red: #f64747ff;
 $color-gray: #00000066;
-$color-gray-light: #00000019;
+
 $color-blue: #3498dbff;
 
 $bg-color-footer: #f9f9fa;
