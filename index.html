@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+<div id="app">
+    <div class="card">
+        <div class="card__header">
+            <div class="profile">
+                <div class="profile__data">
+                    <div class="profile__image">
+                        <img src="./src/assets/images/face.png" alt="Card Header Image"/>
+
+                    </div>
+                    <div class="profile__info">
+                        <p>Владимир Вуйтек</p>
+                        <p>Статистика за последние 30 дней</p>
+                        <div class="profile__info__stats">
+                            <span class="stats__stat stats__stat-eq">647</span>
+                            <div class="divider">/</div>
+                            <span class="stats__stat stats__stat-loss">29</span>
+                            <div class="divider">/</div>
+                            <span class="stats__stat stats__stat-loss">413</span>
+                            <div class="divider">/</div>
+                            <span class="stats__stat stats__stat-roi">23,9%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stats__stat stats__stat-win">
+                        <span>+</span>
+                        <hr/>
+                        <span>647</span>
+                    </div>
+                    <div class="stats__stat stats__stat-eq">
+                        <span>=</span>
+                        <hr/>
+                        <span>29</span>
+                    </div>
+                    <div class="stats__stat stats__stat-loss">
+                        <span>&ndash;</span>
+                        <hr/>
+                        <span>413</span>
+                    </div>
+                    <div class="stats__stat stats__stat-roi">
+                        <span>ROI,%</span>
+                        <hr/>
+                        <span>23,9%</span>
+                    </div>
+                    <div class="stats__stat stats__stat-income">
+                        <span>Прибыль</span>
+                        <hr/>
+                        <span>+22 820</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="card__content collapsed">
+            <div class="card__content__collapsible collapsed">
+                <p class="clamped">
+                    В Кубке страны команда Унаи Эмери бессовестно размялась на «Виктории» из Ла-Коруньи (8:0). При этом
+                    серьёзные соперники: «Севилья», «Барселона» (даже кризисная) и «МЮ» (ещё более кризисный) — били
+                    «Вильярреал». ЛЧ не турнир для Эмери. Он гроссмейстер убогой ЛЕ.
+                    Поэтому у «Аталанты» есть шансы. Ей необходимо играть лишь на победу. Только выигрыш выводит её в плей-офф
+                    ЛЧ. А поражение в комплекте с победой «Янг Бойз» над «МЮ» оставляет бергамасков без еврокубковой весны.
+                    Гасперини вполне по силам одолеть команду Эмери. «Аталанта» уже обыгрывала недавно «Юве» и «Наполи».
+                    Поставлю на победу итальянского клуба.
+                </p>
+            </div>
+            <div class="expand-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.56395 5.55711C2.80477 5.31629 3.19522 5.31629 3.43605 5.55711L8 10.1211L12.5639 5.55711C12.8048 5.31629 13.1952 5.31629 13.436 5.55711C13.6769 5.79794 13.6769 6.18839 13.436 6.42921L8.43605 11.4292C8.19522 11.67 7.80477 11.67 7.56395 11.4292L2.56395 6.42921C2.32313 6.18839 2.32313 5.79794 2.56395 5.55711Z" fill="black" fill-opacity="0.4"/>
+                </svg>
+
+            </div>
+        </div>
+        <div class="card__footer">
+            <div class="forecast">
+                <div class="forecast__text"><p>Прогноз</p>
+                    <p>Штрафное время: тотал меньше 16,5</p></div>
+                <div class="forecast__coef">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.00100708" width="32" height="32" rx="4" fill="#103852"/>
+                        <path d="M23.162 22.4942H26.6197L21.6056 15.1709L28 9.02831H22.3099L9.6338 21.3817L11.9507 9.00101H8.8169L4 12.0518V15.5121L6.89437 14.2085L6.5 15.3483C6.05634 17.7303 5.60563 20.1259 5.16901 22.4942H14.4789L18.331 18.5083L19.9085 20.8357C20.2724 21.3466 20.7582 21.7648 21.3247 22.0547C21.8911 22.3447 22.5214 22.4978 23.162 22.501V22.4942ZM15.6479 14.0584L12.2887 9.00101H16.1268C16.6674 9.03077 17.1961 9.16719 17.6805 9.40191C18.1649 9.63662 18.5947 9.96469 18.9437 10.366L19.169 10.6663L15.6479 14.0584Z"
+                              fill="white"/>
+                    </svg>
+
+                    <div class="forecast__coef__text">
+                        <p>Коэффициент</p>
+                        <p>3.20</p>
+                    </div>
+
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary">Сделать ставку</button>
+
+        </div>
+    </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

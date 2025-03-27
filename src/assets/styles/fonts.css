@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Regular"), local("Proxima Nova-Regular"),
+    url("../fonts/proxima/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Semibold"), local("Proxima Nova-Semibold"),
+    url("../fonts/proxima/proximanova_bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Bold"), local("Proxima Nova-Bold"),
+    url("../fonts/proxima/proximanova_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Extrabold"), local("Proxima Nova-Extrabold"),
+    url("../fonts/proxima/proximanova_extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT";
+  src: local("Futura PT Medium"), local("Futura PT-Medium"),
+    url("../fonts/futura/FuturaPTMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "WixMadeforText";
+  src: local("Wix Madefor Text"),
+    url("../fonts/wix-madefor/WixMadeforText-VariableFont_wght.ttf")
+      format("truetype");
+  font-style: normal;
+}
